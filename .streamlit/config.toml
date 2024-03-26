@@ -1,2 +1,8 @@
 [server]
 port = 8080
+
+[theme]
+primaryColor="#d62222"
+backgroundColor="#1D1D1D"
+secondaryBackgroundColor="#0B0B0B"
+textColor="#E6E6E6"

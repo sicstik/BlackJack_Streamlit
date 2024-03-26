@@ -13,7 +13,7 @@ player_card2 = functions.give_card()
 
 # ----------------------------------------------------------------
 # Write Title
-st.write("<h1 style='text_align: center; color: red'>Welcome to Black Jack!</h1>",
+st.write("<h1 style='text_align: center; color: green'>Welcome to Black Jack!</h1>",
           unsafe_allow_html=True)
 
 # Build Page

@@ -138,7 +138,7 @@ def build_page(cpu_first_card, cpu_second_card, player_first_card, player_second
     # -------------------------------------------------------------------
     st.subheader("CPU")
     if st.session_state["playing"] == 0:
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         with col1:
             card1 = f"{card_file_path}{cpu_first_card["cards"]}"
             st.image(image=card1, width=IMAGE_WIDTH)
@@ -156,7 +156,7 @@ def build_page(cpu_first_card, cpu_second_card, player_first_card, player_second
         st.session_state["cpu_score"] = cpu_score
 
     elif st.session_state["hit"] > 0 and st.session_state["stay"] < 1:
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         with col1:
             card1 = f"{card_file_path}{st.session_state["cpu_card1"]["cards"]}"
             st.image(image=card1, width=IMAGE_WIDTH)
@@ -172,7 +172,7 @@ def build_page(cpu_first_card, cpu_second_card, player_first_card, player_second
     else:
         count_card_list = -1
         card_list = []
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         # Get first 2 saved cards
         with col1:
             card1 = f"{card_file_path}{st.session_state["cpu_card1"]["cards"]}"
@@ -199,7 +199,7 @@ def build_page(cpu_first_card, cpu_second_card, player_first_card, player_second
     # --------------------------------------------------------------------------------
     st.subheader("Player")
     if check_playing() == 0:
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         with col1:
             card1 = f"{card_file_path}{player_first_card["cards"]}"
             st.image(image=card1, width=IMAGE_WIDTH)
@@ -218,7 +218,7 @@ def build_page(cpu_first_card, cpu_second_card, player_first_card, player_second
 
     elif st.session_state["hit"] > 0 and st.session_state["stay"] < 1:
         player_card_list = []
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         with col1:
             card1 = f"{card_file_path}{st.session_state["player_card1"]["cards"]}"
             st.image(image=card1, width=IMAGE_WIDTH)
@@ -246,7 +246,7 @@ def build_page(cpu_first_card, cpu_second_card, player_first_card, player_second
 
     else:
         player_check_ace(st.session_state["player_card1"], st.session_state["player_card2"])
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         with col1:
             card1 = f"{card_file_path}{st.session_state["player_card1"]["cards"]}"
             st.image(image=card1, width=IMAGE_WIDTH)
